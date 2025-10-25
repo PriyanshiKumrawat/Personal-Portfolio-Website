@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Priyanshi Kumrawat</title>
+  <link rel="stylesheet" href="stylee.css">
+  <style>
+    /* Add this only if your layout uses flex for main content */
+    main {
+      display: block !important;  /* Override side-by-side flex */
+	   width:100%;
+		margin: 0 auto;
+		padding:40px 30px;
+	 
+    }
+
+    .contact {
+      width: 80%;
+      margin: 50px auto;
+      background: var(--eerie-black-2, #1e1e1e);
+      padding: 40px;
+      border-radius: 20px;
+      color: #fff;
+    }
+
+    .contact h2 {
+      color: var(--orange-yellow-crayola, #ffb400);
+      margin-bottom: 20px;
+    }
+
+    .contact-list {
+      margin: 30px 0;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .icon-box ion-icon {
+      font-size: 22px;
+      color: var(--orange-yellow-crayola, #ffb400);
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .form-input {
+      background: #2b2b2b;
+      border: none;
+      color: white;
+      padding: 12px;
+      border-radius: 10px;
+    }
+
+    .form-btn {
+      background: var(--orange-yellow-crayola, #ffb400);
+      color: black;
+      font-weight: 600;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .form-btn:hover {
+      background: #ffd76d;
+    }
+
+	.navbar-link {
+		color: #fff;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 16px;
+		padding: 8px 16px;
+		border-radius: 8px;
+		transition: all 0.3s ease;
+		border: 1px solid transparent;
+	}
+
+	.navbar-link:hover {
+		color: #121212;
+		background-color: #ffcc00;
+		border-color: #ffcc00;
+	}
+
+	.navbar-link.active {
+		color: #121212;
+		background-color: #ffcc00;
+		border-color: #ffcc00;
+	}
+	.navbar {
+		flex-direction: column;
+		align-items: center;
+		margin-left:140px;
+		margin-right:140px;
+	}
+
+	.navbar-list {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 15px;
+	}
+  </style>
+</head>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<body>
+<!-- ===== MAIN CONTACT SECTION ===== -->
+<main>
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li><a href="index.html" class="navbar-link">About</a></li>
+        <li><a href="Resume.html" class="navbar-link">Resume</a></li>
+        <li><a href="contact.html" class="navbar-link active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>I'm always open to discussing new projects, creative ideas, or opportunities. Feel free to reach out!</p>
+
+      <ul class="contact-list">
+        <li class="contact-item">
+          <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+          <div><strong>Email:</strong> <a href="mailto:priyanshikumrawatkumrawat@gmail.com">priyanshikumrawatkumrawat@gmail.com</a>
+      </div>
+        </li>
+
+        <li class="contact-item">
+          <div class="icon-box"><ion-icon name="call-outline"></ion-icon></div>
+          <div><strong>Phone:</strong> +91 825 101 6011</div>
+        </li>
+
+        <li class="contact-item">
+          <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+          <div><strong>Location:</strong> Indore, Madhya Pradesh, India</div>
+        </li>
+      </ul>
+
+      <form class="form" action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="fullname" class="form-input" placeholder="Your Name" required>
+        <input type="email" name="email" class="form-input" placeholder="Your Email" required>
+        <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
+        <button type="submit" class="form-btn">
+          <ion-icon name="paper-plane-outline"></ion-icon> Send Message
+        </button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
